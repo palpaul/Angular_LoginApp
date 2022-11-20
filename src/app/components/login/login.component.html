@@ -1,0 +1,34 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container mt">
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img 
+                    class="img-fluid"
+                    style="width: 100px"
+                    src="/assets/pass3.webp" alt="">
+                </div>
+                   <h1 class="text-center">Prease provide username and password...</h1> 
+                   <form (ngSubmit)="onSubmit()">
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>User Name</mat-label>
+                        <input [(ngModel)]="credentials.username" required type="text" name="username" matInput placeholder="" value="">
+                      </mat-form-field>
+                      <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input [(ngModel)]="credentials.password" required type="password" name="password" matInput placeholder="" value="">
+                      </mat-form-field>
+                      <div class="container text-center">
+
+                        <button type="submit" mat-raised-button color="primary">Login</button>
+                        <button type="reset" style="margin-left: 5px;" mat-raised-button color="accent">Reset</button>
+                      </div>
+                    {{credentials|json}}
+
+                   </form>
+            </div>
+        </div>
+    </div>
+</div>
